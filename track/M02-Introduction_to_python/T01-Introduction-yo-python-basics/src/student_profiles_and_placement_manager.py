@@ -25,6 +25,14 @@ class PlacementManager:
             for profile in self.student_profiles:
                 print(profile)
 
+    def filter_students_by_course(self, course):
+        # Return all students whose course matches (case-insensitive)
+        result = []
+        for profile in self.student_profiles:
+            if profile.course.lower() == course.lower():
+                result.append(profile)
+        return result
+
 
 manager = PlacementManager()
 
@@ -39,3 +47,12 @@ for _ in range(n):
     manager.add_student_profile(student)
 
 manager.display_student_profiles()
+
+needed_course = input().strip()
+result = manager.filter_students_by_course(needed_course)
+
+if result:
+    for profile in result:
+        print(profile)
+else:
+    print(f"No students found for course - {needed_course}")
