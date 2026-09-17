@@ -22,10 +22,9 @@ student_id = int(input())
 name = input().strip()
 course = input().strip()
 experience = int(input())
-skills = input().split()
-
+skills_input = input().strip()
 # Create one StudentProfile object
-student = StudentProfile(student_id, name, course, experience, skills)
+student = StudentProfile(student_id, name, course, experience, skills_input)
 
 # Print the profile using __str__()
 print(student)
