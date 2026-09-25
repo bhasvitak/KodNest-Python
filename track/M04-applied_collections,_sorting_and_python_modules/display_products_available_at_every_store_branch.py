@@ -11,7 +11,6 @@ for _ in range(n):
         "products": products
     })
 
-# Write your code here
 for i in branches:
     for j in i["products"]:
         print(f"{i['branch']}: {j}")

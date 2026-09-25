@@ -8,7 +8,6 @@ for _ in range(n):
 
     departments[department] = employees
 
-# Write your code here
 for i in departments.keys():
     for j in departments[i]:
         print(f"{i}: {j}")
